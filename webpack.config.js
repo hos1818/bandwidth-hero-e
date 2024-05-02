@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = env => {
 
@@ -85,10 +85,12 @@ return{
       template: './src/setup.html'
     }),
     // copy extension manifest and icons
-    new CopyWebpackPlugin([
-      { from: './src/manifest.json' },
-      { context: './src/assets', from: 'icon-**', to: 'assets' }
-    ])
+    new CopyPlugin({
+      patterns: [
+        { from: './src/manifest.json' },
+        { context: './src/assets', from: 'icon-**', to: 'assets' }
+      ],
+    }),
   ],
 };
 }
