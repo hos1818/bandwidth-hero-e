@@ -15,6 +15,9 @@ return{
     background: './src/background.js',
     update: './src/update.js'
   },
+  resolve.fallback: {
+    "path": require.resolve("path-browserify") 
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
