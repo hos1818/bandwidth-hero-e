@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
-    "axios": "^0.18.0",
+    "axios": "^1.6.8",
     "is-image": "^3.0.0",
-    "netmask": "^1.0.6",
-    "pretty-bytes": "^4.0.2",
+    "netmask": "^2.0.2",
+    "pretty-bytes": "^5.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.0",
